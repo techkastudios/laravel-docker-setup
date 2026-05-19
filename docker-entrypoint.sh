@@ -26,12 +26,7 @@ fi
 # -----------------------------------
 # 2. Apply Docker .env only if .env is missing or empty
 # -----------------------------------
-if [ ! -s .env ]; then
-    echo ".env not found or empty. Copying .env.docker..."
-    cp .env.docker .env
-else
-    echo ".env already exists and is not empty. Skipping .env.docker copy."
-fi
+cp .env.docker .env
 
 # -----------------------------------
 # 3. Install dependencies
